@@ -1,0 +1,103 @@
+{% extends "Base.html" %}
+{% load static %}
+  {% load i18n %}
+
+{% block title_block %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.7/cropper.min.js" integrity="sha512-N4T9zTrqZUWCEhVU2uD0m47ADCWYRfEGNQ+dx/lYdQvOn+5FJZxcyHOY68QKsjTEC7Oa234qhXFhjPGQu6vhqg==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.7/cropper.css" integrity="sha512-AuLN6bHjJzqZ+Iw48+GdQPp5uKBdPX6+zWV37ju9zw7XIrevIX01RsLtpTU/zCoQcKrQRPe/EpwDpZiv7OUYMA==" crossorigin="anonymous" />
+<link href="{%  static "CSS/formpart.css" %}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block body_block %}
+
+    <div class="whole_page">
+    <div class="center_page">
+        <div class="left-side">
+        <div class="step-count">
+          <p>Step {{wizard.steps.step1}} of {{ wizard.steps.count }}</p>
+
+
+        </div>
+            <form class="part_1_form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{wizard.management_form}}
+            {% if wizard.form.forms %}
+            {{ wizard.form.management_form }}
+               {% for form in wizard.form.forms %}
+                   <div class="form-row name_sec">
+                    <div class="col">
+                    {{form.FirstName}}
+                    </div>
+                      <div class="col">
+                    {{ form.LastName }}
+                      </div>
+                   </div>
+               {{ form.Address }}
+        <div class="form-row city_sec">
+            <div class="col">
+                {{ form.city }}
+            </div>
+            <div class="col">
+               {{ form.Zipcode }}
+            </div>
+            <div class="col">
+                {{ form.Country }}
+            </div>
+        </div>
+           <div class="form-row email_sec">
+               <div class="col">
+                 {{ form.EmailId }}
+               </div>
+
+               <div class="col">
+                  {{ form.PhoneNumber }}
+               </div>
+           </div>
+              {{ form.Github }}
+
+
+             {{ form.img_field }}
+
+            <div class="circle-container preview_image_upload">
+
+            </div>
+
+
+
+
+
+                {% endfor %}
+           {% else %}
+                {{wizard.form}}
+            {% endif %}
+           {% if wizard.steps.prev %}
+
+           <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}">{% trans "prev step" %}</button>
+           {% endif %}
+
+
+               <input type="submit" class="next-btn" value="{% trans "Next" %}"/>
+
+           </form>
+
+        </div>
+        <div class="right-side" >
+            <input type="file" name="upload" id="file_input" onchange="previewFile()">
+
+<div class="cropper_js_box">
+	<img width="300" height="600" src="" id="avatar" alt="Choose,Crop,set">
+</div>
+<div class="set_btn">
+
+    <button id="pre_de" title="Set As profile picture">&checkmark;</button>
+    Click to set Profile Pic
+
+</div>
+
+        </div></div></div>
+
+<script src="{% static "JS/formscript_1.js"%}"></script>
+
+{% endblock %}

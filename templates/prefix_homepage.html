@@ -1,0 +1,25 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block title_block %}
+    <link href="{%  static "CSS/grid_dec.css" %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Preview</title>
+{% endblock %}
+{% block body_block %}
+    <div class="modalwin">
+
+<div class="modal-cnt">
+<img src="{{object.large_image.url}}" alt="no image Found" class="png-section-2">
+<div class="right-col">
+    <h2 class="title-template">{{ object.title }}</h2>
+    <p class="template-info">{{ object.info }}</p>
+    <div class="button-div-template">
+        <button class="cnt-btn" id="cnt-btn-cancel" onclick="history.back()">cancel</button>
+    <button class="cnt-btn" id="cnt-btn-edit" onclick="location.href='{% url "step_forms" object.pk %}'">Edit</button>
+    </div>
+</div>
+</div>
+
+</div>
+
+{% endblock %}

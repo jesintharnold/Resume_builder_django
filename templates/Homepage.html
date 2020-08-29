@@ -1,0 +1,57 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block title_block %}
+
+    <link href="{%  static "CSS/grid_dec.css" %}" rel="stylesheet">
+{#    <script src="{% static "JS/grid_js.js" %}"></script>#}
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <title>Homepage</title>
+
+
+{% endblock %}
+{% block body_block %}
+	<header>
+		<div class="nameplate">
+			<span class="nameflex-1">1</span>
+			<div class="nameflex-2">
+				<span class="name-1">minute</span>
+				<span class="name-2">Resume</span>
+			</div>
+		</div>
+
+	</header>
+	<div class="how">
+			<div class="howabout-1">
+				<div class="content">
+                    GENERATE RESUME IN SECONDS
+				</div>
+
+			</div>
+			<div class="howabout-2">
+				<div class="box_container">
+				<div class="box box-1">Select</div>
+				<div class="box-dash"></div>
+				<div class="box box-2">Fill</div>
+				<div class="box-dash"></div>
+				<div class="box box-3">Generate</div>
+                </div>
+			</div>
+
+	</div>
+
+
+  <div class="section_2">
+<div class="container-sys">
+	<div class="grid-cnt">
+{% for post in object_list %}
+    <div class="card-home">
+        <img src="{{ post.thumbnail.url }}" alt="no image Found" class="png-section">
+     <div class="btn-bt"><button class="btn-housing" onclick="location.href='{% url "index_preview" post.pk %}'">Preview</button></div>
+    </div>
+{% endfor %}</div></div>
+</div>
+{% endblock %}

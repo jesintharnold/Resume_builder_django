@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume-1</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<style type="text/css">
+
+@media print{
+	@page{
+		size: 8.5in 12in;
+		
+	}
+	.resumeCanvas{
+		height:100%;
+		width:100%;
+		position:fixed;
+		top: 0;
+		left: 0;
+		margin: 0 auto;
+		padding: 0;
+		  
+	}
+}
+
+	 .resumeCanvas{
+	 	margin: 0 auto;
+	 	box-sizing: border-box;
+	 	padding: 0.1in;
+	 	width:8.5in;
+	 	height:12in;
+	 	background-color:rgb(235,235,235);
+	 	
+	 	
+	 }
+
+
+
+.col-1-set{
+	width:68%;
+	height:100%;
+	float:left;
+	
+}
+.col-2-set{
+	
+	width:32%;
+	
+	float:left;
+	height:auto;
+}
+
+.name_area{
+	
+	font-size:55px;
+	position:relative;
+	width:100%;
+	font-family: 'Lato', sans-serif;
+	letter-spacing:1px;
+	padding-bottom:0px;
+	padding-top:10px; 
+	
+
+
+}	
+.name_area_2{
+	color:rgb(255,192,0);
+}
+.contact_field{
+	
+	
+	width:95%;
+	border-top:4px solid rgb(161, 161, 161);
+	border-bottom:4px solid rgb(161, 161, 161); 
+	height:auto;
+	overflow:hidden;
+
+}
+.about-title{
+margin-top:10px;
+
+}
+.about-content{
+	margin-bottom:10px;
+    height: auto;
+}
+
+.home{
+font-size:11pt;
+font-family:"Times New Roman";
+font-weight:800; 
+
+
+}
+
+.Icon-home{
+	float:left;
+	width:7%;
+	margin-left:10px;
+	
+}
+.home-data{
+float:left;
+padding-top:5px; 
+width:90%;
+}
+.mail-data{
+	padding-top:1px; 
+	float:left;
+	width:90%;
+}
+.phone-data{
+	padding-top:3px; 
+	float:left;
+	width:90%;
+
+}
+.about_sec{
+	width:100%;
+	height:auto; 
+}
+.about-title{
+	margin-left:10px;
+	font-family: 'Lato', sans-serif;
+	font-size:16pt;
+}
+.about-content{
+	margin-left:15px;
+	font-size:12pt; 
+}
+.experience_sec{
+	
+	width:100%;
+	height:auto;
+	overflow: hidden;  
+}
+.experience-title{
+	margin-left:10px;
+	font-family: 'Lato', sans-serif;
+	font-size:16pt;
+}
+.exp-level{
+	/*border:1px solid;*/
+	width:93%;
+	height:auto;
+	overflow:hidden; 
+	margin-left:35px;  
+	margin-bottom:10px;
+    margin-top: 15px;
+	
+}
+.exp-level-col-1{
+	float: left;
+	margin-right:1px; 
+	/*border:1px solid red;*/
+	padding-right:8px;
+	border-right:2px solid red;
+	font-family: 'Lato', sans-serif;
+
+}
+.exp-startyear{
+     margin-bottom:15px;  
+
+}
+.exp-level-col-2{
+	margin-top:10px;
+	/*border:1px solid green;*/
+	float: left;
+	width:auto; 
+	font-family: 'Times New Roman', sans-serif;
+	font-weight:650;
+    margin-left:10px;
+}
+.education-sec{
+	margin-top:10px;
+	
+
+}
+.title-project{
+	font-family: 'Lato', sans-serif;
+	font-size:16pt;
+	margin-left:10px;
+	margin-bottom:10px; 
+	margin-top:10px; 
+}
+
+.project-group{
+	margin-left:10px;
+}
+.img_sec{
+    background-color:transparent;
+    color:black;
+    align-content:center;
+    justify-content:center;
+    height:161px;
+    width:161px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:25px;   
+    border-radius:50%;
+}
+.language_sec{
+	
+	margin-top:135px;
+	height:auto;
+	width:100%;
+	border-left:2px solid;
+}
+.language_sec_title{
+	margin-left:10px; 
+	font-family: 'Lato', sans-serif;
+	font-size:16pt;
+	color: black;
+	margin-bottom:15px;
+}
+
+.language_sec_content{
+	height:auto;
+	margin-top:0px; 
+	
+	margin-left:25px;
+	font-family: 'Times New Roman', sans-serif;
+	color:black;
+	width:50%; 
+	float:left;
+	padding:0;
+}
+.speak{
+	width:15px;
+	height:15px;
+	background:rgb(255, 192, 0);
+	border:0px solid rgb(235,235,235);
+	float:left;
+	margin-right:15px; 
+	border:1px solid white;
+}
+.Read{
+	width:15px;
+	height:15px;
+	background:rgb(84, 130, 53);
+	border:0px solid rgb(235,235,235);
+	float:left;
+	margin-right:15px; 
+	border:1px solid white;
+}
+.Write{
+	width:15px;
+	height:15px;
+	background:rgb(112, 48, 160);
+	border:0px solid rgb(235,235,235);
+	float:left;
+	border:1px solid white;
+	 
+}
+
+.speakCnt{
+	width:15px;
+	height:15px;
+	background:rgb(255, 192, 0);
+	border:0px solid rgb(235,235,235);
+	float:left;
+	margin-right:5px; 
+	border:1px solid white;
+}
+.ReadCnt{
+	width:15px;
+	height:15px;
+	background:rgb(84, 130, 53);
+	border:0px solid rgb(235,235,235);
+	float:left;
+	margin-right:5px; 
+	border:1px solid white;
+}
+.WriteCnt{
+	width:15px;
+	height:15px;
+	background:rgb(112, 48, 160);
+	border:0px solid rgb(235,235,235);
+	float:left;
+	border:1px solid white;
+	 
+}
+
+
+
+.language_sec_content_detail{
+	
+	height:auto;
+	overflow: hidden;
+}
+.rating_sec{
+	float:left;
+	margin-top:4px;
+}
+.detail_sec{
+	
+    height: 17px;
+    float: left;
+    font-size: 7pt;
+    margin-top:20px;
+    margin-left:25px;
+
+}
+.CNT{
+	float: left;
+	margin-right:10px;
+	color:black;
+	font-family: 'Lato', sans-serif;
+	font-size:9pt; 
+
+}
+
+.skill_title{
+	margin-left:10px; 
+	font-family: 'Lato', sans-serif;
+	font-size:16pt;
+	color: black;
+	margin-bottom:15px;
+
+}
+
+.skills_sec{
+margin-top: 60px;
+border-left:2px solid darkblue;
+}
+
+.skill_sec_content_detail{
+	height:auto;
+	overflow: hidden;
+}
+
+.skill_sec_content{
+	height:auto;
+	margin-top:0px; 
+	margin-left:25px;
+	font-family: 'Times New Roman', sans-serif;
+	color:black;
+	width:45%;
+	float:left;
+	padding:0;
+}
+
+.rate{
+	width:17px;
+	height:17px;
+	background:rgb(255, 192, 0);
+	border:0px solid rgb(235,235,235);
+	float:left;
+	margin-right:5px; 
+	border:1px solid white;
+	border-radius:50%; 
+}
+
+
+		
+	</style>
+</head>
+<body>
+<div class="resumeCanvas">
+<div class="col-1-set">
+		<div class="name_area">
+		<span class="name_area_1">
+			&nbsp;&nbsp;{{ firstname }}
+		</span>
+		<span class="name_area_2">
+			{{ lastname }}
+		</span>
+	</div>
+	<!--Start of contact-form -->
+	<div class="contact_field">
+     <div class="home">
+     	<div class="Icon-home">
+     		<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNTAzLjQwMiwyMjguODg1TDI3My42ODQsMTkuNTY3Yy0xMC4wODMtOS4xODktMjUuMjg4LTkuMTg4LTM1LjM2Ny0wLjAwMUw4LjU5OCwyMjguODg2DQoJCQljLTguMDc3LDcuMzYtMTAuNzQ1LDE4LjctNi43OTksMjguODg5YzMuOTQ3LDEwLjE4OSwxMy41NTcsMTYuNzcyLDI0LjQ4NCwxNi43NzJoMzYuNjl2MjA5LjcyMQ0KCQkJYzAsOC4zMTUsNi43NDIsMTUuMDU3LDE1LjA1NywxNS4wNTdoMTI1LjkxNGM4LjMxNSwwLDE1LjA1Ny02Ljc0MSwxNS4wNTctMTUuMDU3VjM1Ni45MzJoNzQuMDAydjEyNy4zMzcNCgkJCWMwLDguMzE1LDYuNzQyLDE1LjA1NywxNS4wNTcsMTUuMDU3aDEyNS45MDhjOC4zMTUsMCwxNS4wNTctNi43NDEsMTUuMDU3LTE1LjA1N1YyNzQuNTQ3aDM2LjY5Nw0KCQkJYzEwLjkyNiwwLDIwLjUzNy02LjU4NCwyNC40ODQtMTYuNzcyQzUxNC4xNDcsMjQ3LjU4NSw1MTEuNDc5LDIzNi4yNDYsNTAzLjQwMiwyMjguODg1eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNDQ1LjA5Miw0Mi43M0gzNDMuOTczbDExNi4xNzYsMTA1LjYzNnYtOTAuNThDNDYwLjE0OSw0OS40NzEsNDUzLjQwOCw0Mi43Myw0NDUuMDkyLDQyLjczeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" width=19px padding=0px />
+     	</div>
+     	<div class="home-data">
+     		{{ address }},{{city}}-{{ zipcode }},{{ country }}
+     	</div>
+     </div>
+     <div class="home">
+     	<div class="Icon-home">
+     		<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik01MTEuNjk1LDEwNS44NzZMMzMxLjcwOSwyNTUuNzUxTDUxMiwzNzUuNzM4VjEwOS4yNTRDNTEyLDEwOC4xMDIsNTExLjg4MSwxMDYuOTc4LDUxMS42OTUsMTA1Ljg3NnoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggZD0iTTMxNS40OCwyNjkuMjY0bC0yMi42ODksMTguODkzYy0xMC42NTksOC44NzYtMjMuNzI1LDEzLjMxNC0zNi43OSwxMy4zMTRzLTI2LjEzMi00LjQzOC0zNi43OS0xMy4zMTRsLTIyLjY4OS0xOC44OTMNCgkJCUwwLDQwMC4wNTN2Mi42OTRjMCwxMS4xNjEsOS4wODEsMjAuMjQyLDIwLjI0MiwyMC4yNDJoNDcxLjUxNWMxMS4xNjEsMCwyMC4yNDItOS4wODEsMjAuMjQyLTIwLjI0MnYtMi42OTRMMzE1LjQ4LDI2OS4yNjR6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00OTEuODMyLDg5LjAxMmMtMC4wMjUsMC0wLjA1LDAtMC4wNzQsMEgyMC4yNDJjLTAuMDI1LDAtMC4wNDksMC0wLjA3NCwwYy0yLjg1OCwwLjAxMS00LjA5NSwzLjY1Mi0xLjg5OSw1LjQ4MQ0KCQkJTDIwMy41NSwyNDguNzc3YzAuMDIyLDAuMDE4LDAuMDQ0LDAuMDM3LDAuMDY2LDAuMDU1bDI4LjU0NywyMy43NzFjMTMuODEyLDExLjUwMiwzMy44NjMsMTEuNTAyLDQ3LjY3NSwwbDIxMy44OTMtMTc4LjExDQoJCQlDNDk1LjkyNyw5Mi42NjMsNDk0LjY4OSw4OS4wMjIsNDkxLjgzMiw4OS4wMTJ6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik0wLjMwNSwxMDUuODc2QzAuMTE5LDEwNi45NzgsMCwxMDguMSwwLDEwOS4yNTR2MjY2LjQ4NGwxODAuMjkxLTExOS45ODhMMC4zMDUsMTA1Ljg3NnoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" width=19px padding=0px />
+     	</div>
+     	<div class="mail-data">
+     		{{ emailid }}
+     	</div>
+     </div>
+
+     <div class="home">
+     	<div class="Icon-home">
+     		<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDA1LjMzMyA0MDUuMzMzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MDUuMzMzIDQwNS4zMzM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMzczLjMzMywyNjYuODhjLTI1LjAwMywwLTQ5LjQ5My0zLjkwNC03Mi43MDQtMTEuNTYzYy0xMS4zMjgtMy45MDQtMjQuMTkyLTAuODk2LTMxLjYzNyw2LjY5OWwtNDYuMDE2LDM0Ljc1Mg0KCQkJYy01Mi44LTI4LjE4MS04Ni41OTItNjEuOTUyLTExNC4zODktMTE0LjM2OGwzMy44MTMtNDQuOTI4YzguNTEyLTguNTEyLDExLjU2My0yMC45NzEsNy45MTUtMzIuNjQNCgkJCUMxNDIuNTkyLDgxLjQ3MiwxMzguNjY3LDU2Ljk2LDEzOC42NjcsMzJjMC0xNy42NDMtMTQuMzU3LTMyLTMyLTMySDMyQzE0LjM1NywwLDAsMTQuMzU3LDAsMzINCgkJCWMwLDIwNS44NDUsMTY3LjQ4OCwzNzMuMzMzLDM3My4zMzMsMzczLjMzM2MxNy42NDMsMCwzMi0xNC4zNTcsMzItMzJWMjk4Ljg4QzQwNS4zMzMsMjgxLjIzNywzOTAuOTc2LDI2Ni44OCwzNzMuMzMzLDI2Ni44OHoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" width=19px padding=0px/>
+     	</div>
+     	<div class="phone-data">
+     		{{ phonenumber }}
+     	</div>
+     </div>
+
+     <div class="home">
+     	<div class="Icon-home">
+     		<img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMjU2IDBjLTE0MC42MDkzNzUgMC0yNTYgMTE1LjM5MDYyNS0yNTYgMjU2IDAgMTE5Ljk4ODI4MSA4NC4xOTUzMTIgMjI4Ljk4NDM3NSAxOTYgMjU2di04NC42OTUzMTJjLTExLjA3ODEyNSAyLjQyNTc4MS0yMS4yNzM0MzggMi40OTYwOTMtMzIuNTUwNzgxLS44MjgxMjYtMTUuMTI4OTA3LTQuNDY0ODQzLTI3LjQyMTg3NS0xNC41NDI5NjgtMzYuNTQ2ODc1LTI5LjkxMDE1Ni01LjgxNjQwNi05LjgxMjUtMTYuMTI1LTIwLjQ1MzEyNS0yNi44Nzg5MDYtMTkuNjcxODc1bC0yLjYzNjcxOS0yOS44ODI4MTJjMjMuMjUzOTA2LTEuOTkyMTg4IDQzLjM3MTA5MyAxNC4xNjc5NjkgNTUuMzEyNSAzNC4yMzA0NjkgNS4zMDQ2ODcgOC45MjE4NzQgMTEuNDEwMTU2IDE0LjE1MjM0MyAxOS4yNDYwOTMgMTYuNDY0ODQzIDcuNTc0MjE5IDIuMjMwNDY5IDE1LjcwNzAzMiAxLjE2MDE1NyAyNS4xODM1OTQtMi4xODc1IDIuMzc4OTA2LTE4Ljk3MjY1NiAxMS4wNzAzMTMtMjYuMDc0MjE5IDE3LjYzNjcxOS0zNi4wNzQyMTl2LS4wMTU2MjRjLTY2LjY3OTY4Ny05Ljk0NTMxMy05My4yNTM5MDYtNDUuMzIwMzEzLTEwMy44MDA3ODEtNzMuMjQyMTg4LTEzLjk3NjU2My0zNy4wNzQyMTktNi40NzY1NjMtODMuMzkwNjI1IDE4LjIzODI4MS0xMTIuNjYwMTU2LjQ4MDQ2OS0uNTcwMzEzIDEuMzQ3NjU2LTIuMDYyNSAxLjAxMTcxOS0zLjEwNTQ2OS0xMS4zMzIwMzItMzQuMjMwNDY5IDIuNDc2NTYyLTYyLjU0Njg3NSAyLjk4NDM3NS02NS41NTA3ODEgMTMuMDc4MTI1IDMuODY3MTg3IDE1LjIwMzEyNS0zLjg5MDYyNSA1Ni44MDg1OTMgMjEuMzg2NzE4bDcuMTkxNDA3IDQuMzIwMzEzYzMuMDA3ODEyIDEuNzkyOTY5IDIuMDYyNS43Njk1MzEgNS4wNzAzMTIuNTQyOTY5IDE3LjM3MTA5NC00LjcxODc1IDM1LjY4MzU5NC03LjMyNDIxOSA1My43MjY1NjMtNy41NTg1OTQgMTguMTc5Njg3LjIzNDM3NSAzNi4zNzUgMi44Mzk4NDQgNTQuNDY0ODQ0IDcuNzVsMi4zMjgxMjQuMjM0Mzc1Yy0uMjAzMTI0LS4wMzEyNS42MzI4MTMtLjE0ODQzNyAyLjAzNTE1Ny0uOTg0Mzc1IDUxLjk3MjY1Ni0zMS40ODA0NjkgNTAuMTA1NDY5LTIxLjE5MTQwNiA2NC4wNDI5NjktMjUuNzIyNjU2LjUwMzkwNiAzLjAwNzgxMiAxNC4xMjg5MDYgMzEuNzg1MTU2IDIuOTE3OTY4IDY1LjU4MjAzMS0xLjUxMTcxOCA0LjY1NjI1IDQ1LjA1ODU5NCA0Ny4zMDA3ODEgMTkuMjQ2MDk0IDExNS43NTM5MDYtMTAuNTQ2ODc1IDI3LjkzMzU5NC0zNy4xMTcxODggNjMuMzA4NTk0LTEwMy43OTY4NzUgNzMuMjUzOTA3di4wMTU2MjRjOC41NDY4NzUgMTMuMDI3MzQ0IDE4LjgxNjQwNiAxOS45NTcwMzIgMTguNzYxNzE5IDQ2LjgzMjAzMnYxMDUuNzIyNjU2YzExMS44MDg1OTQtMjcuMDE1NjI1IDE5Ni0xMzYuMDExNzE5IDE5Ni0yNTYgLjAwMzkwNi0xNDAuNjA5Mzc1LTExNS4zODY3MTktMjU2LTI1NS45OTYwOTQtMjU2em0wIDAiLz48L3N2Zz4=" width=19px padding=0px />
+     	</div>
+     	<div class="phone-data">
+     		{{ github }}
+     	</div>
+     </div></div>
+
+     <!-- The end of contact form-->
+     <!-- Start of about page-->
+     <div class="about_sec">
+     	<div class="about-title">ABOUT ME</div>
+     	<div class="about-content">
+            {{ aboutme }}
+</div>
+     	
+     </div>
+     <!--End of about Page-->
+     <!--Experience Starts -->
+     <div class="experience_sec">
+     	<div class="experience-title">WORK EXPERIENCE</div>
+     	<!--For Loop in the section-->
+         {% for experience in experience_data %}
+     	<div class="exp-level">
+     		<div class="exp-level-col-1">
+     			<div class="exp-startyear">{{ experience.yearsworked }}</div>
+                <div class="exp-endyear">{{ experience.lastworked }}</div>
+     		</div>
+     		<div class="exp-level-col-2">
+     			<div class="exp-designation">{{experience.designation}}</div>
+     	        <div class="exp-company">{{ experience.companyname }}</div>
+     		</div>
+        </div>
+         {% endfor %}
+
+
+     
+
+
+     	
+
+     
+        <!--end for loop section--> 
+     	
+     </div>
+     <!--Experience Ends-->
+     <div class="education-sec">
+     	<div class="experience-title">EDUCATIONAL BACKGROUND</div>
+         {% for school in school_data %}
+     	<div class="exp-level">
+     		<div class="exp-level-col-1">
+     			<div class="exp-startyear">{{school.yearstart}}</div>
+     			
+     	        <div class="exp-endyear">{{ school.yearEnd }}</div>
+     		</div>
+     		<div class="exp-level-col-2">
+     			<div class="exp-designation">{{ school.title }}</div>
+     	        <div class="exp-company">{{ school.schoolname}}</div>
+     		</div>
+     	
+     	
+     	</div>
+         {% endfor %}
+
+
+     	
+     	
+
+
+     </div>
+     <div class="projects">
+     	<div class="title-project">PROJECTS</div>
+     	<div class="project-group">
+     		{% for pro_data in project_data %}
+                <li>{{pro_data}}</li>
+            {% endfor %}
+     	</div>
+     </div>
+	
+</div>
+<div class="col-2-set">
+<div class="img_sec">
+	<img src="{{img_data}}" width="161px" height="161px" style="border-radius:50% ">
+</div>
+<div class="language_sec">
+	<div class="language_sec_title">LANGUAGES</div>
+
+    {% for lang in language_data %}
+	<div class="language_sec_content_detail">
+		<div class="language_sec_content">{{lang.language}}</div>
+		<div class="rating_sec"  id="{{lang.lang_lev}}">
+        {% if lang.lang_lev == 3 %}
+		   <div class="speak"></div>
+		{% elif lang.lang_lev == 5 %}
+           <div class="Read"></div>
+        {% elif lang.lang_lev == 12 %}
+		   <div class="Write"></div>
+        {% elif lang.lang_lev == 8 %}
+            <div class="speak"></div>
+            <div class="Read"></div>
+        {% elif lang.lang_lev == 15 %}
+            <div class="speak"></div>
+            <div class="Write"></div>
+        {% elif lang.lang_lev == 17 %}
+            <div class="Read"></div>
+            <div class="Write"></div>
+        {% else %}
+            <div class="speak"></div>
+            <div class="Read"></div>
+            <div class="Write"></div>
+        {% endif %}
+	</div>
+	</div>
+
+	{% endfor %}
+
+
+
+
+	
+
+
+
+
+
+ <div class="detail_sec">
+ 	<div class="speakCnt"></div>
+ 	<div class="CNT">SPEAK</div>
+ 	<div class="ReadCnt"></div>
+ 	<div class="CNT">READ</div>
+ 	<div class="WriteCnt"></div>
+ 	<div class="CNT">WRITE</div>
+ </div>
+</div>
+
+<div class="skills_sec">
+	<div class="skill_title">SKILLS</div>
+    {% for skill in skill_data %}
+	<div class="skill_sec_content_detail">
+		<div class="skill_sec_content">{{ skill.skilled_in }}</div>
+		<div class="rating_sec" >
+        {% if skill.skilled_lev == 5 %}
+		<div class="rate rate-1"></div>
+		<div class="rate rate-2"></div>
+		<div class="rate rate-3"></div>
+		<div class="rate rate-4"></div>
+		<div class="rate rate-5"></div>
+            {% elif skill.skilled_lev == 4 %}
+		<div class="rate rate-1"></div>
+		<div class="rate rate-2"></div>
+		<div class="rate rate-3"></div>
+		<div class="rate rate-4"></div>
+            {% elif skill.skilled_lev == 3 %}
+		<div class="rate rate-1"></div>
+		<div class="rate rate-2"></div>
+		<div class="rate rate-3"></div>
+            {% elif skill.skilled_lev == 2 %}
+		<div class="rate rate-1"></div>
+		<div class="rate rate-2"></div>
+            {% elif skill.skilled_lev == 1 %}
+		<div class="rate rate-1"></div>
+        {% endif %}
+        </div>
+	</div>
+    {% endfor %}
+
+
+
+	
+</div>
+
+
+
+
+
+
+
+
+	
+</div>
+</div>
+
+
+</body>
+
+
+
+</html>

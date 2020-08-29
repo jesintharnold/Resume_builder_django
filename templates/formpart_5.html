@@ -1,0 +1,93 @@
+{% extends "Base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title_block %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link href="{%  static "CSS/formpart.css" %}" rel="stylesheet">
+<style>
+
+.left-4{
+    width:35%;
+    border-right:2px solid purple;
+    margin:20px;
+}
+.right-4{
+    margin:20px;
+}
+#lang_id{
+    width: 195px;
+}
+#val_id {
+    width: 120px;
+}
+.form-control{
+    height:50px;
+}
+.btn-delete{
+    background-image: url("{% static "images/remove.png" %}");
+    margin:5px;
+    height:48px;
+    cursor:pointer;
+    box-shadow:transparent;
+    outline:none;
+    border:0.1em solid white;
+    font-weight:300;
+    font-family: 'Bebas Neue', cursive;
+    background-repeat: no-repeat;
+    width:48px;
+    padding:0px;
+    background-position:50% 50%;
+
+}
+.btn-delete:hover{
+    border: 0.1em solid red;
+}
+.col{
+    flex-grow:0;
+}
+.lan{
+    border:1px solid;
+    padding: 5px;
+    margin:5px ;
+    width:auto ;
+}
+</style>
+{% endblock %}
+{% block body_block %}
+
+
+<div class="whole_page">
+    <div class="center_page_1">
+        <div class="left-4">
+            <h1>ADD SKILL</h1>
+            <p>Step {{wizard.steps.step1}} of {{ wizard.steps.count }}</p>
+            <div class="lan">
+                <h6>Rate your skill level between 1 to 5</h6>
+            </div>
+        </div>
+        <div class="right-4">
+          <form method="post">{% csrf_token %}
+{{ wizard.management_form }}
+{% if wizard.form.forms %}
+    {{ wizard.form.management_form }}
+    {% for form in wizard.form.forms %}
+       <div class="form-row form-row-4">
+           <div class="col" >{{ form.skill_set }}</div>
+           <div class="col" >{{ form.skill_level }}</div>
+           <button class="btn-delete"></button>
+       </div>
+        <button class="add-class-4">+</button>
+    {% endfor %}
+
+{% else %}
+    {{ wizard.form }}
+{% endif %}
+{% if wizard.steps.prev %}
+<button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}" class="step-btn">{% trans "Prev" %}</button>
+{% endif %}
+          <input type="submit" class="next-btn" value="{% trans "Next" %}"/>
+          </form>
+        </div></div></div>
+    <script src="{% static "JS/formscript_5.js" %}"></script>
+{% endblock %}

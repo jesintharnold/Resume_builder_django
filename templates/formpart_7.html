@@ -1,0 +1,63 @@
+{% extends "Base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+
+
+{% block title_block %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link href="{%  static "CSS/formpart.css" %}" rel="stylesheet">
+<style>
+    .delete-form-row-output{
+        background-image: url("{% static "images/remove.png" %}");
+    }
+
+</style>
+
+
+{% endblock %}
+
+
+
+
+
+
+{% block body_block %}
+
+
+<div class="whole_page">
+    <div class="center_page">
+
+    <div class="left-side-1">
+     <h2>ABOUT INFO</h2>
+        <p>Step {{wizard.steps.step1}} of {{ wizard.steps.count }}</p>
+    </div>
+    <div class="left-side" >
+    <form method="POST" class="method_form_2">
+    {% csrf_token %}
+        {{ wizard.management_form }}
+        {% if wizard.form.forms %}
+    {{ wizard.form.management_form }}
+    {% for form in wizard.form.forms %}
+      <div class="form-row-output">
+              <div class="left-view">
+                {{form.aboutme}}
+              </div>
+
+</div>
+    {% endfor %}
+{% else %}
+    {{ wizard.form }}
+{% endif %}
+
+{% if wizard.steps.prev %}
+    <button name="wizard_goto_step" type="submit" class="step-btn" value="{{ wizard.steps.prev }}">{% trans "Prev" %}</button>
+{% endif %}
+<input type="submit" class="next-btn" value="{% trans "Generate" %}"/>
+</form>
+</div>
+</div>
+</div>
+{% endblock %}
