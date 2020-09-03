@@ -18,7 +18,7 @@ Developer are Welcomed for Fork/Pull Request.Newer Features are Welcomed !!
 
 
 # Print
-Use control+P to print with the margin properties set to None.
+Use control+P to print with the margin properties set to None for PDF.
 
 
 #  Features:
