@@ -1,3 +1,7 @@
+
+![ ](https://img.shields.io/github/license/jesintharnold/Resume_builder_Django?style=flat-square) 
+![ ](https://img.shields.io/static/v1?label=Website&message=https://oneminuteresume.herokuapp.com&color=Blue&?link=https://oneminuteresume.herokuapp.com/&link=https://oneminuteresume.herokuapp.com/)
+
 # 1 Minute Resume - Django Resume Builder 
 
  > An interactive resume builder built using Django which consist of forms in steps(SessionWizard view) which uses session storage the features and todo are mentioned below.
