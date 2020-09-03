@@ -1,6 +1,7 @@
 
 ![ ](https://img.shields.io/github/license/jesintharnold/Resume_builder_Django?style=flat-square) 
 ![ ](https://img.shields.io/static/v1?label=Website&message=https://oneminuteresume.herokuapp.com&color=Blue&?link=https://oneminuteresume.herokuapp.com/&link=https://oneminuteresume.herokuapp.com/)
+![ ](https://img.shields.io/badge/Aws-S3-yellow)
 
 # 1 Minute Resume - Django Resume Builder 
 
