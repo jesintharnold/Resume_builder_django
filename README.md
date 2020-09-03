@@ -2,6 +2,7 @@
 ![ ](https://img.shields.io/github/license/jesintharnold/Resume_builder_Django?style=flat-square) 
 [![Demo](https://img.shields.io/badge/Website-https%3A%2F%2Foneminuteresume.herokuapp.com%2F-blue)](https://oneminuteresume.herokuapp.com/)
 ![Demo](https://img.shields.io/badge/Aws-S3-yellow)
+![ ](https://img.shields.io/badge/Hosting-HEROKU-Green)
 
 
 # 1 Minute Resume - Django Resume Builder 
@@ -10,6 +11,7 @@
  
 ###
 Developer are Welcomed for Fork/Pull Request.Newer Features are Welcomed !!
+
 
 # Demo 
 ![Demo](https://github.com/jesintharnold/Resume_builder_django/raw/master/Resume-1.PNG)
