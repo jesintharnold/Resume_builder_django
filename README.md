@@ -7,7 +7,13 @@ Developer are Welcomed for Fork/Pull Request.Newer Features are Welcomed !!
 
 # Demo 
 ![Demo](https://github.com/jesintharnold/Resume_builder_django/raw/master/Resume-1.PNG)
-# Features:
+
+
+# Print
+Use control+P to print with the margin properties set to None.
+
+
+#  Features:
 * Creative Templates made using HTML,JAVASCRIPT,CSS
 * Adding Templates directly to Admin panel
 * Automatic Updation of templates in home-page
