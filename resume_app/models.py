@@ -8,11 +8,10 @@ class Resume_home_data(models.Model):
     def __str__(self):
         return str(self.serial_no)
 
-
 class Resume_template_data(models.Model):
     attach_pin=models.ForeignKey(Resume_home_data,on_delete=models.CASCADE,related_name="resume_pin")
     title=models.CharField(max_length=35)
     info=models.TextField(max_length=255)
     large_image=models.ImageField(upload_to='large_image/')
-    doc_html_file=models.FileField(upload_to='documents')
+
 

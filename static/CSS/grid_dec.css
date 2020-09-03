@@ -182,14 +182,14 @@ header{
 				justify-content: center;
 				align-items: center;
 				font-size:50px;
-
-				color:gold;
+                color:gold;
 
 			}
 			.nameflex-2{
 				display: inline-flex;
 				flex-direction: column;
 				grid-row-gap:0px;
+                width:80%;
 
 			}
 			.name-1{
@@ -283,3 +283,10 @@ header{
                 padding:20px;
 
 			}
+
+            .img-back {
+                margin-top: 23px;
+                margin-right: 18px;
+                cursor: pointer;
+            }
+

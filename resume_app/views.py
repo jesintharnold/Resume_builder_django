@@ -143,7 +143,7 @@ class Resume_Forms(SessionWizardView):
 
 
 
-        return  render(self.request, "Resume-{}.html".format(self.kwargs['pk']),context = {
+        return  render(self.request,"Resume-{}.html".format(self.kwargs['pk']),context = {
 
             "firstname": firstname,
             "lastname": lastname,

@@ -24,7 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    url(r'^home/',views.index.as_view(template_name="Homepage.html"),name="index"),
+    url(r'^$',views.index.as_view(template_name="Homepage.html"),name="index"),
     url(r'^preview/(?P<pk>\d+)/$',views.preview.as_view(template_name="prefix_homepage.html"),name="index_preview"),
     url(r'^checkout/(?P<pk>\d+)/$',views.Resume_Forms.as_view(views.FORMS),name="step_forms"),
 
